@@ -13,9 +13,6 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
-import javafx.scene.paint.Color;
-import javafx.scene.text.Font;
-import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
@@ -34,7 +31,7 @@ public class App extends Application {
 
         // title
         Text sceneTitle = new Text("Welcome");
-        sceneTitle.setFont(Font.font("Tahoma", FontWeight.NORMAL, 20));
+        sceneTitle.setId("welcome-text");
         grid.add(sceneTitle, 0, 0, 2, 1);
 
         // fields
@@ -57,12 +54,12 @@ public class App extends Application {
         hbBtn.getChildren().add(btn);
         grid.add(hbBtn, 1, 4);
 
-        final Text actiontarget = new Text();
-        grid.add(actiontarget, 1, 6);
+        final Text actionTarget = new Text();
+        actionTarget.setId("actiontarget");
+        grid.add(actionTarget, 1, 6);
 
         btn.setOnAction(_ -> {
-            actiontarget.setFill(Color.FIREBRICK);
-            actiontarget.setText("Sign in button pressed");
+            actionTarget.setText("Sign in button pressed");
         });
 
         Scene scene = new Scene(grid, 300, 275);
@@ -72,7 +69,7 @@ public class App extends Application {
         scene.getStylesheets().add(App.class.getResource("styles.css").toExternalForm());
 
         // only for testing purposes
-        grid.setGridLinesVisible(true);
+//        grid.setGridLinesVisible(true);
 
         primaryStage.show();
     }
