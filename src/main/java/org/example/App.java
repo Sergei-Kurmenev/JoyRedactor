@@ -68,6 +68,9 @@ public class App extends Application {
         Scene scene = new Scene(grid, 300, 275);
         primaryStage.setScene(scene);
 
+        // apply css
+        scene.getStylesheets().add(App.class.getResource("styles.css").toExternalForm());
+
         // only for testing purposes
         grid.setGridLinesVisible(true);
 
