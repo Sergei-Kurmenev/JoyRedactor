@@ -28,7 +28,8 @@ javafx {
 
 application {
 //    mainClass = "org.example.App"
-    mainClass = "org.example.FXMLExample"
+//    mainClass = "org.example.FXMLExample"
+    mainClass = "org.example.circles.ColorfulCircles"
 }
 
 tasks.named<Test>("test") {
