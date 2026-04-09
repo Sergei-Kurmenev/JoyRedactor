@@ -27,7 +27,8 @@ javafx {
 }
 
 application {
-    mainClass = "org.example.App"
+//    mainClass = "org.example.App"
+    mainClass = "org.example.FXMLExample"
 }
 
 tasks.named<Test>("test") {
